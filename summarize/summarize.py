@@ -4,6 +4,10 @@ import re
 import nltk
 import heapq
 
+nltk.data.path.append("/tmp")
+
+nltk.download("punkt", download_dir="/tmp")
+
 
 def summarize(title):
     scraped_data = urllib.request.urlopen(
