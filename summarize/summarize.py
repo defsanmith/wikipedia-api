@@ -7,6 +7,7 @@ import heapq
 nltk.data.path.append("/tmp")
 
 nltk.download("punkt", download_dir="/tmp")
+nltk.download('stopwords', download_dir="/tmp")
 
 
 def summarize(title):
