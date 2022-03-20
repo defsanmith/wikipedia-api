@@ -4,6 +4,11 @@ from summarize.summarize import summarize
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Welcome!"
+
+
 @app.route('/summarize', methods=['GET'])
 def getSummary():
     title = request.args.get('title')
@@ -11,7 +16,8 @@ def getSummary():
     try:
         summary = summarize(title)
         return jsonify({'status': True, 'summary': summary})
-    except:
+    except Exception as e:
+        print(e)
         return jsonify({'status': False, 'summary': None})
 
 

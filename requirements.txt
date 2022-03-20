@@ -1,2 +1,4 @@
 Flask==1.1.2
 itsdangerous==2.0.1
+bs4==4.9.3
+nltk==3.6.5
